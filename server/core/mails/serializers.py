@@ -1,7 +1,7 @@
 from api.serializers import NextAdminSerializer
 from .models import Mails
 
-class MailAdminSerializer(NextAdminSerializer):
+class MailsAdminSerializer(NextAdminSerializer):
     class Meta:
         model = Mails
         fields = '__all__'
