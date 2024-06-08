@@ -1,8 +1,8 @@
-from api.serializers import BaseAdminSerializer
+from api.serializers import NextAdminSerializer
 from .models import User
 from rest_framework import serializers
 
-class UserAdminSerializer(BaseAdminSerializer):
+class UserAdminSerializer(NextAdminSerializer):
     display_fields = ['id', 'email', 'first_name', 'last_name', 'is_active', 'is_staff', 'is_superuser', 'last_login']
     display_link = 'email'
     class Meta:

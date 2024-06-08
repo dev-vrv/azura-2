@@ -3,13 +3,13 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.decorators import action
 from django.shortcuts import get_object_or_404
-from .serializers import BaseAdminSerializer
+from .serializers import NextAdminSerializer
 from rest_framework.pagination import PageNumberPagination
 
 
-class BaseAdminController(viewsets.ViewSet):
+class NextAdminController(viewsets.ViewSet):
     model = None
-    serializer_class = BaseAdminSerializer
+    serializer_class = NextAdminSerializer
 
     @action(detail=False, methods=['get'], url_path='form')
     def get_form(self, request):

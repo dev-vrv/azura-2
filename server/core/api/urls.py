@@ -1,8 +1,8 @@
 from django.urls import path, include
-from .views import APIRootView
+from .views import AppsConfig
 from .api_router import router
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('api-root/', APIRootView.as_view(), name='api-root'),
+    path('apps-config/', AppsConfig.as_view(), name='apps-config'),
 ]

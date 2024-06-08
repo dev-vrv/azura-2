@@ -3,12 +3,12 @@ from rest_framework.response import Response
 from .api_router import urls
 import re
 
-class APIRootView(APIView):
+class AppsConfig(APIView):
     def get(self, request, *args, **kwargs):
-        routes = APIRootRout().make_api_root(urls)
+        routes = AppsRouts().make_api_root(urls)
         return Response(routes)
 
-class APIRootRout:
+class AppsRouts:
     def __init__(self) -> None:
         pass
     

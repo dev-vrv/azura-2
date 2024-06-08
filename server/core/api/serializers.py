@@ -31,7 +31,7 @@ FIELDS_SYSTEM = [
     'last_session',   
 ]
 
-class BaseAdminSerializer(serializers.ModelSerializer):
+class NextAdminSerializer(serializers.ModelSerializer):
     exclude_list = []
     readonly_fields = ['id', 'created_at', 'updated_at']
     display_fields = ['id', 'created_at', 'updated_at']
@@ -40,7 +40,7 @@ class BaseAdminSerializer(serializers.ModelSerializer):
     
     
     def __init__(self, *args, **kwargs):
-        super(BaseAdminSerializer, self).__init__(*args, **kwargs)
+        super(NextAdminSerializer, self).__init__(*args, **kwargs)
         
     def create(self, validated_data):
         return self.Meta.model.objects.create(**validated_data)
